@@ -23,7 +23,7 @@ MODE=config("MODE", default="dev")
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '#!tm2slc$mfz!icmoh&sgv+f&&zx5#%m-sza4*c=-ab0wewm3*'
+SECRET_KEY = 'derrick'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG',default=False,cast=bool)
