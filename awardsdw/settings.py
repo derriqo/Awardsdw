@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'trophy',
     'bootstrap4',
-    'accounts'
+    'accounts',
 ]
 
 MIDDLEWARE = [
