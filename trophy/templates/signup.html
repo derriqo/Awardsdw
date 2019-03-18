@@ -1,14 +1,24 @@
 {% extends 'base.html' %}
+
 {% block title %}Sign Up{% endblock %}
 
 {% block content %}
-  <h2>Sign up</h2>
-  <form method="post">
-    {% csrf_token %} 
-    {%for fields in form%}
-    {{fields.label}}
-    <div>{{fields}}</div>
-    {%endfor%}
-    <button type="submit">Sign up</button>
-  </form>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+                <h2>Sign up</h2>
+                <form method="post">
+                  {% csrf_token %} 
+                  {%for fields in form%}
+                  {{fields.label}}
+                  <div>{{fields}}</div>
+                  {%endfor%}
+                  <button type="submit">Sign up</button>
+                </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+  
 {% endblock %}
