@@ -1,22 +1,35 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 
-
 {% block content %}
 {% if user.is_authenticated %}
       Hello {{ user.username }}
 {% else %}
-  <p style="font-family: 'Enriqueta', serif;"> Please <a href="{% url 'login' %}">Login</a> or <a href="{% url 'signup' %}">Sign up</a>  To Rate/Post a Project</p>
+  <p style="font-family: 'Enriqueta', serif;"> Please <a href="{% url 'login' %}">Login</a> or <a href="{% url 'signup' %}">Sign up</a>To Rate/Post a Project</p>
 {% endif %}
     <h1 style="text-align: center; font-family: 'Enriqueta', serif; font-size: 40px;"><strong>Welcome to Awardsdw</strong> </h1>
-    
-          {% for project in projects %}
-          <img src="{{project.projo_pic.url}}" class="img-responsive" alt="Image" >
-              <p>{{project.projo_pic.url}}</p>
-              <p>{{project.title}}</p>
-        
-          {% endfor %}
 
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-8">
+        {% for project in projects %}
+
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="{{project.projo_pic.url}}" alt="Card image">
+          <div class="card-body">
+            <h4 class="card-title">John Doe</h4>
+            <p class="card-text">Some example text.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+
+      {% endfor %}
+
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+         
 {% endblock %}
 
 
