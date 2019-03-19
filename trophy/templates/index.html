@@ -6,9 +6,9 @@
 {% if user.is_authenticated %}
   Hello {{ user.username }}
 {% else %}
-  <p style="font-family: 'Finger Paint', cursive;"> Please Sign in To Rate/Post a Project</p>
+  <p style="font-family: 'Finger Paint', cursive;"> Please <a href="{% url 'login' %}">Login</a> or <a href="{% url 'signup' %}">Sign up</a>  To Rate/Post a Project</p>
 {% endif %}
-<h1 style="text-align: center; font-family: 'Finger Paint', cursive;">Welcome to Awardsdw</h1>
+<h1 style="text-align: center; font-family: 'Finger Paint', cursive; font-size: 40px;"><strong>Welcome to Awardsdw</strong> </h1>
 <ul>
 {% for project in all_projects_list %}
 <li>{{ project }}</li>
