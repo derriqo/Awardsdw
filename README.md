@@ -70,7 +70,7 @@ To run this project, please follow the following instructions.
 ---
 
 **User Story**
-As a user i want to be able to posted photos and view other people's photos .
+As a user i want to be able to view people's projects without loging in and login in only when i want to rate other users projects .
 
 | Input | Output |
 | :---------------- | :---------------: | 
