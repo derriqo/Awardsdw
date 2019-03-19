@@ -9,25 +9,24 @@
 {% endif %}
     <h1 style="text-align: center; font-family: 'Enriqueta', serif; font-size: 40px;"><strong>Welcome to Awardsdw</strong> </h1>
 
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-8">
+    <div class="w3-row">
+  
         {% for project in projects %}
-
-        <div class="card" style="width:400px">
-          <img class="card-img-top" src="{{project.projo_pic.url}}" alt="Card image">
-          <div class="card-body">
-            <h4 class="card-title">John Doe</h4>
-            <p class="card-text">Some example text.</p>
-            <a href="#" class="btn btn-primary">See Profile</a>
+        
+        <div class="w3-col l3  w3-card w3-margin" >
+          <img class="w3-image" src="{{project.projo_pic.url}}" alt="Card image">
+          <div class="w3-container w3-white">
+            <h4 class="w3-center">John Doe</h4>
+            <p >Some example text.</p>
+            <div class="w3-center" ><a href="#" class="w3-button w3-margin-bottom w3-blue">See Profile</a></div>
+           
           </div>
         </div>
-
+      
       {% endfor %}
 
       </div>
-      <div class="col-md-1"></div>
-    </div>
+      
 
          
 {% endblock %}
