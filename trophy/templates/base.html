@@ -8,11 +8,13 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">
   
-  <title>{% block title %}Awards{% endblock %}</title>
+  <title >{% block title %}Awards{% endblock %}</title>
 </head>
 <body>
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <div >
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd; font-family: 'Finger Paint', cursive; font-size: 40px;">
         <a class="navbar-brand" href="{% url 'home' %}" style="text-align: center;">Awards</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
         data-target="#navbarCollapse" aria-controls="navbarCollapse"
@@ -46,7 +48,7 @@
         {% endif %}
         </div>
         </nav>
-  <main>
+  <main style=" background: -webkit-linear-gradient(to right, #108dc7, #ef8e38);">
     {% block content %}
     {% endblock %}
   </main>
@@ -54,5 +56,6 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4\YfRvH+8abtTE1Pi6jizo"crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/\1.14./umd/popper.min.js"integrity="sha384-ZMP rVo mIykV+ + J UJ46jBk WLaUAdn689aCwoqbB\JiSnjAK/l WvCWPIPm49"crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/\js/bootstrap.min.js"integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ\6OW/JmZQ5stwEULTy"crossorigin="anonymous"></script>
-  </body>
+</div> 
+</body>
 </html>
