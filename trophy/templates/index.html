@@ -1,17 +1,26 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
-{% block title %}Home{% endblock %}
+
 
 {% block content %}
 {% if user.is_authenticated %}
-  Hello {{ user.username }}
+      Hello {{ user.username }}
 {% else %}
   <p style="font-family: 'Enriqueta', serif;"> Please <a href="{% url 'login' %}">Login</a> or <a href="{% url 'signup' %}">Sign up</a>  To Rate/Post a Project</p>
 {% endif %}
-<h1 style="text-align: center; font-family: 'Enriqueta', serif; font-size: 40px;"><strong>Welcome to Awardsdw</strong> </h1>
-<ul>
-{% for project in all_projects_list %}
-<li>{{ project }}</li>
-{% endfor %}
-</ul>
+    <h1 style="text-align: center; font-family: 'Enriqueta', serif; font-size: 40px;"><strong>Welcome to Awardsdw</strong> </h1>
+    
+          {% for project in projects %}
+          <img src="{{project.projo_pic.url}}" class="img-responsive" alt="Image" >
+              <p>{{project.projo_pic.url}}</p>
+              <p>{{project.title}}</p>
+        
+          {% endfor %}
+
 {% endblock %}
+
+
+<!-- <div class="row" style="margin-top:100px;">
+   
+       
+ </div> -->

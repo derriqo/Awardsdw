@@ -9,6 +9,10 @@ class Project(models.Model):
     link = models.URLField(max_length=250)
     user = models.ForeignKey(User,null=True)
 
+    def __str__(self):
+        return self.title
+
+
 class Profile(models.Model):
 
     profile_pic = models.ImageField(upload_to='profile-pic/')
