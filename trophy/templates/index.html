@@ -10,8 +10,8 @@
 {% endif %}
 <h1>AVAILABLE PROJECTS</h1>
 <ul>
-{% for project in projects %}
-{ project }
+{% for project in all_projects_list %}
+<li>{{ project }}</li>
 {% endfor %}
 </ul>
 {% endblock %}
