@@ -3,17 +3,17 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-      Hello {{ user.username }}
+   <p style="color: #82caff"><Strong> Hello {{ user.username }}</Strong></p>
 {% else %}
   <p style="font-family: 'Enriqueta', serif;"> Please <a href="{% url 'login' %}">Login</a> or <a href="{% url 'signup' %}">Sign up</a>To Rate/Post a Project</p>
 {% endif %}
     <h1 style="text-align: center; font-family: 'Enriqueta', serif; font-size: 40px;"><strong>Welcome to Awardsdw</strong> </h1>
-    <div class="col-md 2"></div>
+    
     <div class="w3-row">
-  
+      <div class="col-md 2"></div>
         {% for project in projects %}
         
-        <div class="w3-col l3  w3-card w3-margin w3-hover-shadow" style="font-family: 'Enriqueta', serif; ">
+        <div class="w3-col l3  w3-card w3-margin w3-hover-shadow w3-padding-64" style="font-family: 'Enriqueta', serif; ">
           <img class="w3-image" src="{{project.projo_pic.url}}" alt="Card image">
           <div class="w3-container w3-white">
             <h4 class="w3-center">{{project.title}}</h4>
