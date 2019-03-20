@@ -9,13 +9,14 @@
 {% endif %}
     <h1 style="text-align: center; font-family: 'Enriqueta', serif; font-size: 40px;"><strong>Welcome to Awardsdw</strong> </h1>
     
-    <div class="w3-row">
-      <div class="col-md 2"></div>
+    
+      <div class="w3-container w3-center" >
+          <div class="w3-row w3-center">
         {% for project in projects %}
         
-        <div class="w3-col l3  w3-card w3-margin w3-hover-shadow w3-padding-64" style="font-family: 'Enriqueta', serif; ">
-          <img class="w3-image" src="{{project.projo_pic.url}}" alt="Card image">
-          <div class="w3-container w3-white">
+        <div class="w3-col l3  w3-card-4 w3-round w3-margin " style="min-height:300px; font-family: 'Enriqueta', serif; ">
+          <img class="w3-image w3-hover-opacity" src="{{project.projo_pic.url}}" alt="Card image">
+          <div class="w3-container w3-transparent">
             <h4 class="w3-center">{{project.title}}</h4>
             <p class="w3-center"><a href="{{project.link}}">{{project.link}}</a></p>
             <div class="w3-center" ><a href="#" class="w3-button w3-margin-bottom w3-blue">RATE</a></div>
@@ -24,7 +25,7 @@
         </div>
       
       {% endfor %}
-
+    </div>
       </div>
       
 
