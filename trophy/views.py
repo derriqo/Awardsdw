@@ -30,7 +30,18 @@ def new_project(request):
 
 @login_required(login_url='accounts/')
 def search_project(request):
-    projects = Project.search_by_projectname()
+
+    if 'Saka' in request.GET and request.GET["Saka"]:
+        idea = request.GET.get("Saka")
+        searched_projects = Project.search_by_projectname(idea)
+        message = f"{idea}"
+
+        return render(request,'search.html',{'message':message,'projects':searched_projects})
+
+    else:
+        message ="You have not searched for any project"
+        return render(request,'search.html',{'message':message,})
+
 
 
 

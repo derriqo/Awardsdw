@@ -20,7 +20,7 @@ class Project(models.Model):
 
     @classmethod
     def search_by_projectname(cls,idea):
-        projects = cls.objects.filter(title_icontains=idea)
+        projects = cls.objects.filter(title__icontains=idea)
         return projects
 
 class Profile(models.Model):
