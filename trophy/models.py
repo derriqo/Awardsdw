@@ -18,6 +18,11 @@ class Project(models.Model):
     def delete_project(self):
         self.objects.get(id=self.id).delete()
 
+    @classmethod
+    def search_by_projectname(cls,idea):
+        projects = cls.objects.filter(title_icontains=idea)
+        return projects
+
 class Profile(models.Model):
 
     profile_pic = models.ImageField(upload_to='profile-pic/')

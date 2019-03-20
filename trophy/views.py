@@ -28,4 +28,9 @@ def new_project(request):
 
     return render(request,'addproject.html',{'form':form})
 
+@login_required(login_url='accounts/')
+def search_project(request):
+    projects = Project.search_by_projectname()
+
+
 
