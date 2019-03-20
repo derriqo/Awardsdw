@@ -13,11 +13,11 @@
   
         {% for project in projects %}
         
-        <div class="w3-col l3  w3-card w3-margin" >
+        <div class="w3-col l3  w3-card w3-margin" style="font-family: 'Enriqueta', serif;">
           <img class="w3-image" src="{{project.projo_pic.url}}" alt="Card image">
           <div class="w3-container w3-white">
-            <h4 class="w3-center">John Doe</h4>
-            <p >Some example text.</p>
+            <h4 class="w3-center">{{project.title}}</h4>
+            <p >{{project.link}}</p>
             <div class="w3-center" ><a href="#" class="w3-button w3-margin-bottom w3-blue">See Profile</a></div>
            
           </div>
