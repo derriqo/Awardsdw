@@ -2,14 +2,15 @@
 {% load bootstrap4 %}
 
 {% block content %}
+
 {% if user.is_authenticated %}
    <p style="color: #82caff"><Strong> Hello {{ user.username }}</Strong></p>
 {% else %}
-  <p style="font-family: 'Enriqueta', serif; color: #82caff"> Please <a href="{% url 'login' %}">Login</a> or <a href="{% url 'signup' %}">Sign up</a>To Rate/Post a Project</p>
+  <p style="font-family: 'Enriqueta', serif; color: #82caff"><strong> Please <a href="{% url 'login' %}">Login</a> or <a href="{% url 'signup' %}">Sign up</a>To Rate/Post a Project</strong></p>
 {% endif %}
     <h1 style="text-align: center; font-family: 'Enriqueta', serif; font-size: 40px;"><strong>Welcome to Awardsdw</strong> </h1>
-    
-    
+        
+      
       <div class="w3-container w3-center" >
           <div class="w3-row w3-center">
         {% for project in projects %}
