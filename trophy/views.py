@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Project
 from django.contrib.auth.decorators import login_required
 from .forms import CreateProject
@@ -17,14 +17,15 @@ def profile(request):
 @login_required(login_url='accounts/')
 def new_project(request):
 
-    form = CreateProject(request.POST,request.FILES)
     if request.method=='POST':
         form = CreateProject(request.POST,request.FILES)
         if form.is_valid():
-            form.save()
-            return redirect('index')
-        else:
-            form = CreateProject()
+            project = form.save(commit=False)
+            project.user = request.user
+            project.save( )
+            return redirect('home')
+    else:
+        form = CreateProject()
 
     return render(request,'addproject.html',{'form':form})
 

@@ -25,10 +25,10 @@ class Project(models.Model):
 
 class Profile(models.Model):
 
-    profile_pic = models.ImageField(upload_to='profile-pic/')
+    profile_pic = models.ImageField(upload_to='profile-pic/',default='default.jpg')
     bio = models.TextField()
     phone_number = models.IntegerField()
-    user = models.OneToOneField(User,related_name='profile',null=True)
+    user = models.OneToOneField(User,on_delete=models.CASCADE,related_name='profile',null=True)
 
     def __str__(self):
         return self.user.username
