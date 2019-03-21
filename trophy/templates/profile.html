@@ -3,8 +3,8 @@
 {% block content %}
     <div class="content-section">
       <div class="profile">
-          
-          <img style="cir" src="{{current_user.profile.profile_pic.url}}" alt="">
+
+          <img class="rounded-circle account-img" src="{{current_user.profile.profile_pic.url}}" alt="">
     
         <div class="profile-body">
            <h2 class="account-heading" >{{ current_user.username }}</h2>
