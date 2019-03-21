@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'trophy',
     'bootstrap4',
     'accounts',
+    'star_ratings',
 ]
 
 MIDDLEWARE = [
@@ -154,5 +155,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+STAR_RATINGS_RANGE=10
 
 django_heroku.settings(locals())

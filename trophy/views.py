@@ -1,7 +1,8 @@
 from django.shortcuts import render,redirect
-from .models import Project
+from .models import Project,Profile,Rating
 from django.contrib.auth.decorators import login_required
 from .forms import CreateProject
+from django.http import Http404
 
 def index(request):
     projects = Project.objects.all()
@@ -42,6 +43,11 @@ def search_project(request):
     else:
         message ="You have not searched for any project"
         return render(request,'search.html',{'message':message,})
+
+@login_required(login_url='accounts/')
+def rating(request,project_id):    
+    projects = Project.objects.get(id=project_id)    
+    return render(request,'ratings.html', locals())    
 
 
 

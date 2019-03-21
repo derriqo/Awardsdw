@@ -23,7 +23,7 @@ urlpatterns = [
     url('',include('trophy.urls')),
     url('accounts/', include('accounts.urls')),
     url('accounts/', include('django.contrib.auth.urls')),
-    # url('',TemplateView.as_view(template_name= 'index.html'),name='home')
+    url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
 ]
 
 

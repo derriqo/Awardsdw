@@ -51,7 +51,8 @@ class Rating(models.Model):
     profile = models.ForeignKey(Profile,related_name='rating',null=True)
     comment = models.CharField(max_length=50,null=True)
 
-
+    def __str__(self):
+        return self.profile
 
 
 
