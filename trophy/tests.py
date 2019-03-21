@@ -27,3 +27,34 @@ class ProfileTestClass(TestCase):
         Profile.delete_profile(fetch_profile)
         profiles = Profile.objects.all()
         self.assertTrue(len(profiles) == 0)
+
+class ProjectTestClass(TestCase):
+    
+    #Setup method
+
+    def setUp(self):
+        #Creating a new Profile and saving it
+        self.derrick=Profile(username='derrick',email='derrick@gmail.com',password='qwerty123')
+        self.user.save()
+        self.derrick= Profile(profile_pic ='derrick.jpg',bio='junior developer',phone_number='07123453',user=self.user)
+        self.derrick.save_profile()
+
+        #Creating a new project and saving it
+        self.new_project = Project(projo_pic)
+        self.new_project.save()
+
+
+    def tearDown(self):
+        Profile.objects.all().delete()
+        Project.objects.all().delete()
+
+    #Testing for Search Project
+    def test_save_profile(self):
+        projects = Project.objects.all()
+        self.assertTrue(len(projects)>0)
+
+        
+
+
+
+
