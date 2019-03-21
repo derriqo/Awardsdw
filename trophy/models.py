@@ -30,6 +30,17 @@ class Profile(models.Model):
     phone_number = models.IntegerField()
     user = models.OneToOneField(User,related_name='profile',null=True)
 
+    def __str__(self):
+        return self.user.username
+    
+    def save_profile(self):
+        self.save()
+    
+    @classmethod
+    def delete_profile(cls,derrick):
+        cls.delete(derrick)
+    
+
 
 class Rating(models.Model):
 
