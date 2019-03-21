@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 {% load static %}
-
+{% load ratings %} 
 {% block content %}
   
 <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
@@ -22,9 +22,9 @@
           <div class="w3-container w3-transparent">
             <h4 class="w3-center">{{project.title}}</h4>
             <p class="w3-center"><a href="{{project.link}}">{{project.link}}</a></p>
-            <div class="w3-center" ><a href="{% url 'rating' project_id=project.id %}" class="w3-button w3-margin-bottom w3-blue">RATE</a></div>
-            {% load ratings %} 
             
+           
+
             {% ratings project icon_width=18 %}
           </div>
         </div>
